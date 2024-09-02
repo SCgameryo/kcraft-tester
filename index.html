@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kcrafts | Home</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        body {
+            background-color: #0ab1e5; /* Blue background */
+            color: white; /* White text */
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth; /* Enable smooth scrolling */
+        }
+
+        .nav {
+            background-color: rgba(0, 121, 107, 0.7); /* Semi-transparent teal background */
+            padding: 15px 20px; /* Increased padding for a more balanced navbar */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            position: fixed; /* Fixed position at the top */
+            width: 100%; /* Full width */
+            top: 0; /* Align to the top */
+            z-index: 1000; /* Ensure it's on top of other content */
+        }
+
+        .nav-logo p {
+            margin: 0;
+            font-size: 24px; /* Adjusted font size for better visibility */
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .nav-menu ul li {
+            margin: 0 15px; /* Adjusted margin for better spacing */
+        }
+
+        .nav-menu ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px; /* Adjusted font size for better readability */
+        }
+
+        .btn-signin {
+            background-color: #ffffff; /* White background */
+            color: #0ab1e5; /* Blue text */
+            border: none;
+            padding: 10px 20px; /* Increased padding for a better button appearance */
+            font-size: 16px; /* Adjusted font size */
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            margin-left: 20px; /* Pull button left by 2 cm */
+        }
+
+        .btn-signin:hover {
+            background-color: #eeeeee; /* Slightly darker on hover */
+        }
+
+        .content {
+            margin-top: 60px; /* Added margin-top to avoid overlapping with the nav */
+            padding: 20px;
+        }
+
+        .text-section {
+            background-color: #00796b; /* Teal background for text section */
+            color: white;
+            padding: 20px;
+            margin: 20px auto; /* Center align with margin for spacing */
+            border-radius: 8px; /* Rounded corners for a polished look */
+            max-width: 800px; /* Limit width for better readability */
+            box-shadow: 0 0 10px rgba(0,0,0,0.3); /* Optional shadow for a lifted effect */
+        }
+
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .product-card {
+            background-color: white;
+            color: black;
+            width: 250px; /* Fixed width for product cards */
+            padding: 20px;
+            margin: 15px;
+            border: 2px solid black; /* Black border around the product */
+            border-radius: 10px; /* Rounded corners for a more polished look */
+            text-align: center;
+        }
+
+        .product-card img {
+            max-width: 100%; /* Ensure image fits within the card */
+            max-height: 200px; /* Adjust height as needed */
+            border-radius: 8px; /* Rounded corners for images */
+        }
+
+        .carousel-container {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+            margin: 20px auto; /* Center align with margin for spacing */
+            overflow: hidden;
+            border-radius: 8px; /* Rounded corners for the carousel */
+            box-shadow: 0 0 10px rgba(0,0,0,0.3); /* Optional shadow for a lifted effect */
+        }
+
+        .carousel-wrapper {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .services-section {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="nav">
+            <div class="nav-logo">
+                <p>Kcrafts</p>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="#home" class="link active">Home</a></li>
+                    <li><a href="#store" class="link">Store</a></li>
+                    <li><a href="#services" class="link">Services</a></li>
+                    <li><a href="#about" class="link">About</a></li>
+                </ul>
+            </div>
+            <a id="login-signup" href="login.php" class="btn-signin">Sign In & Sign Up</a> <!-- Updated link -->
+        </nav>
+
+        <div class="content">
+            <div id="home" class="content-section">
+                <h1>Welcome to KCraft</h1>
+                <p>Your one-stop destination for all things 3D printed! At KCraft, we bring your ideas to life through innovative 3D printing technology, offering a diverse range of customizable products that cater to every need and occasion.</p>
+            </div>
+
+            <div id="text-section" class="text-section">
+                <h2>Learn More About Us</h2>
+                <p>At KCraft, we are dedicated to transforming your ideas into tangible, 3D-printed masterpieces. Explore our wide range of products and services, and discover how our cutting-edge technology can bring your vision to life. Whether you're interested in personalized gifts, functional home decor, or corporate solutions, KCraft is here to provide innovative and high-quality 3D printing solutions.</p>
+            </div>
+
+            <div id="store" class="content-section">
+                <h2>Our Products</h2>
+                <p>Discover a variety of unique and high-quality products, each crafted with care and precision. Browse through our collection of 3D-printed items and find something that resonates with your style and needs.</p>
+                
+                <!-- Image Carousel -->
+                <div class="carousel-container">
+                    <div class="carousel-wrapper">
+                        <div class="carousel-slide">
+                            <img src="https://via.placeholder.com/800x400?text=Product+1" alt="Product 1">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="https://via.placeholder.com/800x400?text=Product+2" alt="Product 2">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="https://via.placeholder.com/800x400?text=Product+3" alt="Product 3">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Cards -->
+                <div class="product-grid" id="product-grid">
+                    <!-- Example of products to be loaded dynamically -->
+                </div>
+            </div>
+
+            <div id="services" class="content-section">
+                <h2>Our Services</h2>
+                <p>We offer a variety of services to help you create and maintain beautiful crafts. From custom orders to craft workshops, we have something for everyone.</p>
+                <ul class="text-section">
+                    <li>Personalized Gifts: Create unforgettable gifts for birthdays, anniversaries, weddings, and more.</li>
+                    <li>Home Decor: Add a touch of modern elegance to your home with our bespoke decor items.</li>
+                    <li>Functional Items: Discover practical solutions for everyday challenges with our range of functional 3D printed products.</li>
+                    <li>Corporate Solutions: Enhance your business with custom promotional items, prototypes, and office accessories.</li>
+                </ul>
+                <div class="text-section">
+                    <h3>Additional Information</h3>
+                    <p>Explore additional information about our services and how they can benefit you. We are committed to delivering excellence and ensuring your satisfaction with every project we undertake. Learn more about our dedicated team and the passion that drives us to create remarkable crafts and solutions.</p>
+                </div>
+            </div>
+
+            <div id="buy" class="content-section" style="display: none;">
+                <h1>Purchase Product</h1>
+                <div class="buy-section">
+                    <h2>Select Your Product</h2>
+                    <!-- Insert product options here -->
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // JavaScript for smooth scrolling to sections
+            document.querySelectorAll('.nav-menu a').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    document.querySelector(link.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // JavaScript for carousel
+            const carouselWrapper = document.querySelector('.carousel-wrapper');
+            const slides = document.querySelectorAll('.carousel-slide');
+            const totalSlides = slides.length;
+            let currentIndex = 0;
+
+            function moveCarousel() {
+                currentIndex = (currentIndex + 1) % totalSlides;
+                const offset = -currentIndex * 100;
+                carouselWrapper.style.transform = `translateX(${offset}%)`;
+            }
+
+            setInterval(moveCarousel, 3000); // Move every 3 seconds
+        </script>
+    </div>
+</body>
+</html>
